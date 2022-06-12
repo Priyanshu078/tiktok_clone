@@ -1,6 +1,6 @@
-# tiktok
+# tiktok_clone
 
-A new Flutter project.
+It is tiktok clone developed using flutter and firebase.
 
 ## Getting Started
 
