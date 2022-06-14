@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok/pages/inbox/directMessages.dart';
 
 class Inbox extends StatefulWidget {
   Inbox({Key? key}) : super(key: key);
@@ -73,7 +74,14 @@ class _InboxState extends State<Inbox> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 8.0),
-                    child: IconButton(onPressed: () {}, icon: Icon(Icons.send)),
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DirectMessages()));
+                        },
+                        icon: Icon(Icons.send)),
                   )
                 ],
               ),

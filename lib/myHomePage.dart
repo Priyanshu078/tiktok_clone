@@ -3,7 +3,7 @@ import 'package:tiktok/pages/about.dart';
 import 'package:tiktok/pages/add.dart';
 import 'package:tiktok/pages/discover.dart';
 import 'package:tiktok/pages/homePage.dart';
-import 'package:tiktok/pages/inbox.dart';
+import 'package:tiktok/pages/inbox/inbox.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
