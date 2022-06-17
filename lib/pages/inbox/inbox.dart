@@ -100,6 +100,7 @@ class _InboxState extends State<Inbox> {
                     ),
                     Text(
                       "Notifications aren't available",
+                      textAlign: TextAlign.center,
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
@@ -107,6 +108,7 @@ class _InboxState extends State<Inbox> {
                       height: MediaQuery.of(context).size.height / 75,
                     ),
                     Text("Notifications about your account will appear here",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
