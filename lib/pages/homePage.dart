@@ -12,6 +12,7 @@ class _HomePageState extends State<HomePage> {
   List images = ["dummyimage.jpg", "dummy2.jpg", "dummy3.jpg"];
   List dummyText = ["Reading in the clouds", "Royal Enfield", "Jai mahakal"];
   Color favoriteColor = Colors.white;
+  double turns = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -173,10 +174,15 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: CircleAvatar(
-                                  radius: 25,
-                                  backgroundImage:
-                                      AssetImage("assets/gramophone.jpg"),
+                                child: AnimatedRotation(
+                                  onEnd: () => rotateImage(),
+                                  turns: turns,
+                                  duration: Duration(seconds: 1),
+                                  child: CircleAvatar(
+                                    radius: 25,
+                                    backgroundImage:
+                                        AssetImage("assets/gramophone.jpg"),
+                                  ),
                                 ),
                               ),
                             ],
@@ -188,5 +194,11 @@ class _HomePageState extends State<HomePage> {
                 )
               ]);
             }));
+  }
+
+  void rotateImage() {
+    setState(() {
+      turns += 1;
+    });
   }
 }
